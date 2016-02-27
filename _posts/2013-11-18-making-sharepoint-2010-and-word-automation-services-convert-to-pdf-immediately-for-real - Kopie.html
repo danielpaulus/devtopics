@@ -1,0 +1,384 @@
+---
+layout: post
+status: publish
+published: true
+title: 'Making SharePoint 2010 and Word Automation Services convert to pdf immediately.
+  For Real. '
+author:
+  display_name: daniel
+  login: daniel
+  email: nemschok@yahoo.de
+  url: http://devtopics.de/?page_id=52
+author_login: daniel
+author_email: nemschok@yahoo.de
+author_url: http://devtopics.de/?page_id=52
+wordpress_id: 380
+wordpress_url: http://devtopics.de/?p=380
+date: '2013-11-18 19:29:29 +0100'
+date_gmt: '2013-11-18 17:29:29 +0100'
+categories:
+- Allgemein
+- C#
+- Code
+- SharePoint
+tags:
+- SharePoint
+- SharePoint 2010
+- '2010'
+- Word Automation Services
+- immediate pdf conversion
+- immediate
+- pdf
+- conversion
+- conversionjob
+- docx to pdf
+comments:
+- id: 172
+  author: Radu
+  author_email: radu.chirila@amplexor.com
+  author_url: ''
+  date: '2014-06-19 12:04:09 +0200'
+  date_gmt: '2014-06-19 10:04:09 +0200'
+  content: This is a great article. Unfortunately there is no stream support for SP2010,
+    and the input&#47;output files have to be in a library. In case the converted
+    file needs to be written back to the user, the process is quite slow.
+- id: 173
+  author: Ajay
+  author_email: ajay1609@gmail.com
+  author_url: ''
+  date: '2014-07-30 01:26:42 +0200'
+  date_gmt: '2014-07-29 23:26:42 +0200'
+  content: "Trying to get this work with Sharepoint 2013 (as synchronous conversion
+    in sharepoint 2013 supports only one file at a time and I have use case to handle
+    multiple files at at time). The following line wordServiceApplicationProxy = (WordServiceApplicationProxy)wordServiceApplication.ServiceApplicationProxyGroup.Proxies.ElementAt(4);
+    gives me ArgumentOutOfRangeException\r\n\r\n\r\nUnhandled Exception: System.ArgumentOutOfRangeException:
+    Specified argument was\r\nout of the range of valid values.\r\nParameter name:
+    index\r\n   at System.Linq.Enumerable.ElementAt[TSource](IEnumerable`1 source,
+    Int32 inde\r\nx)\r\n   at ConvertWordToPDFReflection.WordServiceConversionJobRunner.RunWordServicesI\r\nmmediately(SPFarm
+    farm) in c:\\workplace\\ConvertWordToPDFReflection\\ConvertWordTo\r\nPDFReflection\\WordServiceConversionJobRunner.cs:line
+    58\r\n   at ConvertWordToPDFReflection.Program.TestImmediateConversion() in c:\\workpla\r\nce\\ConvertWordToPDFReflection\\ConvertWordToPDFReflection\\Program.cs:line
+    38\r\n\r\nAny idea?"
+- id: 195
+  author: buy clomid 100 mg
+  author_email: sscononentopy@gmail.com
+  author_url: http://gettrueclomidnow.com
+  date: '2015-03-30 03:59:25 +0200'
+  date_gmt: '2015-03-30 01:59:25 +0200'
+  content: '[url=http:&#47;&#47;gettrueclomidnow.com&#47;]clomid da medley[&#47;url]
+    <a href="http:&#47;&#47;gettrueclomidnow.com&#47;" &#47; rel="nofollow"> clomid
+    without prescription <&#47;a>'
+- id: 196
+  author: payday loans
+  author_email: fehjnyao@gmail.com
+  author_url: http://paydayloansonline1min.com
+  date: '2015-03-30 06:04:04 +0200'
+  date_gmt: '2015-03-30 04:04:04 +0200'
+  content: '[url=http:&#47;&#47;paydayloansonline1min.com&#47;]payday loans[&#47;url]
+    <a href="http:&#47;&#47;paydayloansonline1min.com&#47;" &#47; rel="nofollow">
+    cash advance online <&#47;a>'
+- id: 197
+  author: kamagra 100mg
+  author_email: sscononentopy@gmail.com
+  author_url: http://kamagraonlinegetnow.com
+  date: '2015-03-30 19:46:32 +0200'
+  date_gmt: '2015-03-30 17:46:32 +0200'
+  content: '[url=http:&#47;&#47;kamagraonlinegetnow.com&#47;]Kamagra 50 mg Cheap and
+    Fast[&#47;url] <a href="http:&#47;&#47;kamagraonlinegetnow.com&#47;" &#47; rel="nofollow">
+    buy sildenafil citrate 100 mg <&#47;a>'
+- id: 198
+  author: priligy online without prescription
+  author_email: sscononentopy@gmail.com
+  author_url: http://gettruepriligynow.com
+  date: '2015-03-30 21:08:38 +0200'
+  date_gmt: '2015-03-30 19:08:38 +0200'
+  content: '[url=http:&#47;&#47;gettruepriligynow.com&#47;]buy priligy online without
+    prescription[&#47;url] <a href="http:&#47;&#47;gettruepriligynow.com&#47;" &#47;
+    rel="nofollow"> buy priligy online <&#47;a>'
+- id: 207
+  author: relationships dating
+  author_email: sscononentopy@gmail.com
+  author_url: http://onlinedatingdirectly.com
+  date: '2015-04-02 18:18:23 +0200'
+  date_gmt: '2015-04-02 16:18:23 +0200'
+  content: '[url=http:&#47;&#47;onlinedatingdirectly.com&#47;]dating seeking[&#47;url]
+    <a href="http:&#47;&#47;onlinedatingdirectly.com&#47;" &#47; rel="nofollow"> dating
+    adult <&#47;a>'
+- id: 211
+  author: amoxil without prescription
+  author_email: sscononentopy@gmail.com
+  author_url: http://ordercheapestamoxilhere.com
+  date: '2015-04-04 19:44:53 +0200'
+  date_gmt: '2015-04-04 17:44:53 +0200'
+  content: '[url=http:&#47;&#47;ordercheapestamoxilhere.com&#47;]Amoxil 250 mg no
+    prescription online[&#47;url] <a href="http:&#47;&#47;ordercheapestamoxilhere.com&#47;"
+    &#47; rel="nofollow"> can you get Amoxil over the counter <&#47;a>'
+- id: 219
+  author: pep store easy loan
+  author_email: sscononentopy@gmail.com
+  author_url: http://getcashloansnowhere.com
+  date: '2015-04-09 12:03:02 +0200'
+  date_gmt: '2015-04-09 10:03:02 +0200'
+  content: '[url=http:&#47;&#47;getcashloansnowhere.com&#47;]american cash advance
+    online[&#47;url] <a href="http:&#47;&#47;getcashloansnowhere.com&#47;" &#47; rel="nofollow">
+    fast pay day loans <&#47;a>'
+- id: 221
+  author: online pre_script_ions overnight Cytotec in Missouri
+  author_email: sscononentopy@gmail.com
+  author_url: http://buycytotecdirectly.com
+  date: '2015-04-10 02:28:06 +0200'
+  date_gmt: '2015-04-10 00:28:06 +0200'
+  content: '[url=http:&#47;&#47;buycytotecdirectly.com&#47;]cheap cytotec[&#47;url]
+    <a href="http:&#47;&#47;buycytotecdirectly.com&#47;" &#47; rel="nofollow"> cuantas
+    pastillas cytotec debo de tomar para abortar <&#47;a>'
+- id: 223
+  author: pay day lenders
+  author_email: sscononentopy@gmail.com
+  author_url: http://truepaydayloansnow.com
+  date: '2015-04-10 15:40:42 +0200'
+  date_gmt: '2015-04-10 13:40:42 +0200'
+  content: '[url=http:&#47;&#47;truepaydayloansnow.com&#47;]ez payday loans pueblo
+    co[&#47;url] <a href="http:&#47;&#47;truepaydayloansnow.com&#47;" &#47; rel="nofollow">
+    bad credit payday loans lenders only <&#47;a>'
+- id: 226
+  author: cash loans usa
+  author_email: sscononentopy@gmail.com
+  author_url: http://fastcashloansdirectly.com
+  date: '2015-04-12 12:29:52 +0200'
+  date_gmt: '2015-04-12 10:29:52 +0200'
+  content: '[url=http:&#47;&#47;fastcashloansdirectly.com&#47;]payday loans[&#47;url]
+    <a href="http:&#47;&#47;fastcashloansdirectly.com&#47;" &#47; rel="nofollow">
+    31903 cash advance <&#47;a>'
+- id: 234
+  author: where to find money
+  author_email: ottmwbzr@gmail.com
+  author_url: http://paydayloansonline1min.com
+  date: '2015-04-15 20:01:13 +0200'
+  date_gmt: '2015-04-15 18:01:13 +0200'
+  content: '[url=http:&#47;&#47;paydayloansonline1min.com&#47;]no credit check visa[&#47;url]
+    <a href="http:&#47;&#47;paydayloansonline1min.com&#47;" &#47; rel="nofollow">
+    6 month installment loans for bad credit <&#47;a>'
+- id: 238
+  author: 1 hour loans no fee
+  author_email: haqesmgz@gmail.com
+  author_url: http://paydayloansonline1min.com
+  date: '2015-04-21 02:29:48 +0200'
+  date_gmt: '2015-04-21 00:29:48 +0200'
+  content: '[url=http:&#47;&#47;paydayloansonline1min.com&#47;]cash advance cape girardeau
+    mo[&#47;url] <a href="http:&#47;&#47;paydayloansonline1min.com&#47;" &#47; rel="nofollow">
+    payday loan gaffney sc <&#47;a>'
+- id: 243
+  author: unsecured loans guaranteed approval
+  author_email: srburfre@gmail.com
+  author_url: http://paydayloansonline1min.com
+  date: '2015-04-28 10:58:25 +0200'
+  date_gmt: '2015-04-28 08:58:25 +0200'
+  content: '[url=http:&#47;&#47;paydayloansonline1min.com&#47;]kawasaki credit[&#47;url]
+    <a href="http:&#47;&#47;paydayloansonline1min.com&#47;" &#47; rel="nofollow">
+    payday loan for 1 year <&#47;a>'
+- id: 250
+  author: six month short term loans
+  author_email: zytnsocg@gmail.com
+  author_url: http://paydayloansonlineare.com
+  date: '2015-05-06 08:45:43 +0200'
+  date_gmt: '2015-05-06 06:45:43 +0200'
+  content: '[url=http:&#47;&#47;paydayloansonlineare.com&#47;]best interest rates
+    for small loans[&#47;url] <a href="http:&#47;&#47;paydayloansonlineare.com&#47;"
+    &#47; rel="nofollow"> bad credit loans in hammond la <&#47;a>'
+- id: 253
+  author: payday loans
+  author_email: niiokdcu@gmail.com
+  author_url: http://paydayloansonline1min.com
+  date: '2015-05-09 13:36:43 +0200'
+  date_gmt: '2015-05-09 11:36:43 +0200'
+  content: '[url=http:&#47;&#47;paydayloansonline1min.com&#47;]payday loans[&#47;url]
+    <a href="http:&#47;&#47;paydayloansonline1min.com&#47;" &#47; rel="nofollow">
+    payday loans <&#47;a>'
+- id: 256
+  author: obeovogudu
+  author_email: ofiayu@mannbdinfo.org
+  author_url: http://lasix-buy-online.net/
+  date: '2015-05-29 04:45:58 +0200'
+  date_gmt: '2015-05-29 02:45:58 +0200'
+  content: '[url=http:&#47;&#47;flagyl-online-buy.net&#47;]Flagyl Online[&#47;url]
+    <a href="http:&#47;&#47;priligy-cheapest-price-buy.org&#47;" rel="nofollow">Priligy
+    Dapoxetine<&#47;a> http:&#47;&#47;lasix-buy-online.net&#47;'
+- id: 263
+  author: anheliri
+  author_email: uvanudoya@fsfsdf.org
+  author_url: http://lasix-buy-online.net/
+  date: '2015-06-24 07:08:39 +0200'
+  date_gmt: '2015-06-24 05:08:39 +0200'
+  content: '[url=http:&#47;&#47;flagyl-online-buy.net&#47;]Metronidazole Online[&#47;url]
+    <a href="http:&#47;&#47;priligy-cheapest-price-buy.org&#47;" rel="nofollow">Priligy
+    Online<&#47;a> http:&#47;&#47;lasix-buy-online.net&#47;'
+- id: 264
+  author: alixoyumowun
+  author_email: asidix@mailadadad.org
+  author_url: http://lasix-buy-online.net/
+  date: '2015-06-24 07:23:22 +0200'
+  date_gmt: '2015-06-24 05:23:22 +0200'
+  content: '[url=http:&#47;&#47;flagyl-online-buy.net&#47;]Order Flagyl[&#47;url]
+    <a href="http:&#47;&#47;priligy-cheapest-price-buy.org&#47;" rel="nofollow">Buy
+    Priligy Online<&#47;a> http:&#47;&#47;lasix-buy-online.net&#47;'
+---
+<p>I am still angry while writing this. This time I drew the line. When they put file conversions in a conversion job, I thought ok. When I found out that this conversion job was run by a TimerJob every 15 Minutes, I thought ok no problem. When I got an SPSecurityException when using SPTimerJobs Runnow Method from JavaScript through my WCF Service I still remained calm and searched the web for answers. As it turns out, there is NO method to run timerjobs from user code because you would need access permissions to the config database. Forget RunWithElevatedPrivileges, it is not going to work!</p>
+<p>As a result I was stuck with two options:</p>
+<ol>
+<li>Give something (ApplicationPool, Site, WCF Service) farm admin permissions to run a timerjob<&#47;li>
+<li>Use some characteristic of my website or sitecollection to indicate word conversion should be executed and have some other code (another timerjob, eventreceiver) execute the runnow method.<&#47;li><br />
+<&#47;ol><br />
+The first is not really an option for any production environment of course. I couldn't sleep calmly knowing something with this high level of permissions is publicly available. Let alone that our administrators would have probably punched me out of the building the moment I would have asked them.</p>
+<p>The second option will work just fine. I just could not live with the sheer complexity of this kind of solution. For immediate synchronous conversion I would have to deploy a TimerJob that runs every minute and checks on some flag I set on my website. This means the worst case conversion will take place 1 minute + original word service timer job runtime from now. Unacceptable for me.</p>
+<p>Ok after my little rant, I calmed down a little. &nbsp;My final solution was to reverse engineer the conversion process and use internal private API through reflection to do the conversion(It was built by man, it can be controlled by man! :-D). This of course will probably not be compatible with newer versions of SharePoint but what do you know, &nbsp;SharePoint 2013 does all that out-of-the-box.&nbsp;But what can I tell you, it works just fine. This method is of course not ideal either. But it works, and it is totally reliable. It does not circumvent load balancing or any other mechanisms. Just make sure you don't call it hundreds of times every minute :-) Depending on your environment you'll have to adapt it because remember: With great power comes the necessity to think twice about your SharePoint solution.</p>
+<p>Enough talk, here's the code:</p>
+<pre class="brush: csharp; gutter: true"> public static class WordServiceConversionJobRunner<br />
+    {<br />
+        private static WordService wordService;<br />
+        private static WordServiceApplication wordServiceApplication=null;<br />
+        private static WordServiceApplicationProxy wordServiceApplicationProxy = null;<br />
+        private static Assembly wordServerServiceAssembly;<br />
+        public static Type batchitem_type;</p>
+<p>        &#47;&#47;&#47;<br />
+<summary>
+        &#47;&#47;&#47; Runs Word Automation Services ConversionJobs immediately using internal API. Use with caution ;-)<br />
+        &#47;&#47;&#47; <&#47;summary><br />
+        public static void RunWordServicesImmediately()<br />
+        {<br />
+            RunWordServicesImmediately(SPFarm.Local);<br />
+        }</p>
+<p>        &#47;&#47;&#47;<br />
+<summary>
+        &#47;&#47;&#47; Runs Word Automation Services ConversionJobs immediately using internal API. Use with caution ;-)<br />
+        &#47;&#47;&#47; <&#47;summary><br />
+        &#47;&#47;&#47;
+<param name="farm">Pass the farm if coming from a unit test. (Probably should use DI..)<&#47;param><br />
+        public static void RunWordServicesImmediately(SPFarm farm)<br />
+        {</p>
+<p>            &#47;&#47;load types<br />
+            wordServerServiceAssembly = typeof (QueueJob).Assembly;<br />
+            batchitem_type = wordServerServiceAssembly.GetType("Microsoft.Office.Word.Server.Service.BatchItem");<br />
+            var queueJobType = typeof (QueueJob);</p>
+<p>            &#47;&#47;get timerjob instance without calling default constructor, because it does some things<br />
+            &#47;&#47;we dont want it to do and will throw exceptions<br />
+            var job = (QueueJob)FormatterServices.GetUninitializedObject(queueJobType);</p>
+<p>            &#47;&#47;find WordService</p>
+<p>            foreach (SPService service in farm.Services)<br />
+            {<br />
+                if (service.TypeName.Equals("Word Automation Services"))<br />
+                {<br />
+                    wordService =(WordService) service;<br />
+                    break;<br />
+                }<br />
+            }</p>
+<p>            &#47;&#47;find service app and proxy<br />
+            wordServiceApplication = (WordServiceApplication)wordService.Applications.First();<br />
+            wordServiceApplicationProxy = (WordServiceApplicationProxy)wordServiceApplication.ServiceApplicationProxyGroup.Proxies.ElementAt(4);</p>
+<p>            &#47;&#47;Set the private fields of our job instance. The constructor would normally have done that for us but<br />
+            &#47;&#47;well..<br />
+            var field = typeof(QueueJob).GetField("m_serviceApp", BindingFlags.NonPublic | BindingFlags.GetField | BindingFlags.Instance);<br />
+            var field2 = typeof(QueueJob).GetField("m_serviceAppProxy", BindingFlags.NonPublic | BindingFlags.GetField | BindingFlags.Instance);<br />
+            field.SetValue(job, wordServiceApplication);<br />
+            field2.SetValue(job, wordServiceApplicationProxy);</p>
+<p>            &#47;&#47;run the job<br />
+            Myexec(job);<br />
+        }<br />
+        &#47;&#47;&#47;<br />
+<summary>
+        &#47;&#47;&#47; This method uses reflection to call a lot of internal API to prepare<br />
+        &#47;&#47;&#47; the job instance for invoking its private DispatchBatchItems method.<br />
+        &#47;&#47;&#47; <&#47;summary><br />
+        &#47;&#47;&#47;
+<param name="job">The QueueJob instance that is forced to run<&#47;param><br />
+        private static void Myexec (QueueJob job)<br />
+    {</p>
+<p>        QueueDatabase database = wordServiceApplication.Database;</p>
+<p>        IEnumerable<Uri> endpoints = (IEnumerable<Uri>)wordServiceApplicationProxy.GetPropertyValue("Endpoints");<br />
+        int numberOfAvailableServiceEndpoints = endpoints.Count<Uri>();<br />
+        if (numberOfAvailableServiceEndpoints == 0)<br />
+        {<br />
+		    return;<br />
+        }</p>
+<p>        int num2 = wordServiceApplication.TotalActiveProcesses * wordServiceApplication.ConversionsPerInstance;<br />
+        int num3 = numberOfAvailableServiceEndpoints * num2;</p>
+<p>            var listType = typeof (List<>);<br />
+            var g_batch = listType.MakeGenericType(batchitem_type);<br />
+            var batch = Activator.CreateInstance(g_batch);<br />
+            var dynMethod = database.GetType().GetMethod("GetBatch", BindingFlags.NonPublic | BindingFlags.Instance);<br />
+            batch=dynMethod.Invoke(database, new object[] { num3, wordServiceApplication.ConversionTimeout });</p>
+<p>        &#47;&#47;batch = database.GetBatch(num3, wordServiceApplication.ConversionTimeout);<br />
+        &#47;&#47;if (batch == null || batch.Count == 0)<br />
+        &#47;&#47;{</p>
+<p>        &#47;&#47;    return;<br />
+        &#47;&#47;}</p>
+<p>            Type workercoll = wordServerServiceAssembly.GetType("Microsoft.Office.Word.Server.Service.BatchWorkerCollection");<br />
+            var ctor = workercoll.GetConstructors(BindingFlags.Instance | BindingFlags.NonPublic)[0];<br />
+            var batchWorkerCollection = ctor.Invoke(new object[] { endpoints, numberOfAvailableServiceEndpoints, num2 });</p>
+<p>            dynMethod = workercoll.GetMethod("InitWorkersAndWait", BindingFlags.NonPublic | BindingFlags.Instance);<br />
+            dynMethod.Invoke(batchWorkerCollection, new object[] { wordServiceApplication.BatchWorkerTimeout });</p>
+<p>            dynMethod = job.GetType().GetMethod("GetBatchItems", BindingFlags.NonPublic | BindingFlags.Instance);<br />
+            dynMethod.Invoke(job, new object[] { batch, batchWorkerCollection, num2 });<br />
+        &#47;&#47;    if (batch.Count == 0)<br />
+        &#47;&#47;{</p>
+<p>        &#47;&#47;    return;<br />
+        &#47;&#47;}</p>
+<p>            dynMethod = typeof(QueueJob).GetMethod("GetBatchUpdateXml", BindingFlags.NonPublic | BindingFlags.Static);<br />
+            var batchXml=dynMethod.Invoke(null, new object[] { batch });</p>
+<p>            dynMethod = database.GetType().GetMethod("UpdateBatch", BindingFlags.NonPublic | BindingFlags.Instance);<br />
+            var batchJobs =dynMethod.Invoke(database, new object[] {batchXml });</p>
+<p>            &#47;&#47;finally, call DispatchBatchItems and make the magic happen<br />
+            dynMethod = job.GetType().GetMethod("DispatchBatchItems", BindingFlags.NonPublic | BindingFlags.Instance);<br />
+            dynMethod.Invoke(job, new object[] { batchWorkerCollection, batch, batchJobs });</p>
+<p>    }</p>
+<p>        private static PropertyInfo GetPropertyInfo(Type type, string propertyName)<br />
+        {<br />
+            PropertyInfo propInfo = null;<br />
+            do<br />
+            {<br />
+                propInfo = type.GetProperty(propertyName,<br />
+                       BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);<br />
+                type = type.BaseType;<br />
+            }<br />
+            while (propInfo == null &amp;&amp; type != null);<br />
+            return propInfo;<br />
+        }</p>
+<p>        private static object GetPropertyValue(this object obj, string propertyName)<br />
+        {<br />
+            if (obj == null)<br />
+                throw new ArgumentNullException("obj");<br />
+            Type objType = obj.GetType();<br />
+            PropertyInfo propInfo = GetPropertyInfo(objType, propertyName);<br />
+            if (propInfo == null)<br />
+                throw new ArgumentOutOfRangeException("propertyName",<br />
+                  string.Format("Couldn&#039;t find property {0} in type {1}", propertyName, objType.FullName));<br />
+            return propInfo.GetValue(obj, null);<br />
+        }</p>
+<p>    }<&#47;pre><br />
+And because I am a big fan of writing tests, I started writing an Nunit test for running it. It is not completed but nevertheless I wanted to include it here so it doesn't feel sad. &nbsp;*currently working on that test*</p>
+<p>&nbsp;</p>
+<pre class="brush: csharp; gutter: true">[Test]<br />
+        public void TestImmediateConversion()<br />
+        {<br />
+            SPFarm farm = web.Site.WebApplication.Farm;</p>
+<p>            &#47;&#47;this needs some changes obviously, this would have to be done in setup methods<br />
+            SPList doclib = web.Lists["somedoclib"];<br />
+            SPFolder targetFolder = doclib.Folders[0].Folder;</p>
+<p>            string inputFile = web.Url + "&#47;" + targetFolder.Url + "&#47;" + targetFolder.Files[0].Name;<br />
+            string outputFile = web.Url + "&#47;" + targetFolder.Url + "&#47;" + "test.pdf";<br />
+            EnqueueConversionJob(inputFile, outputFile);<br />
+            WordServiceConversionJobRunner.RunWordServicesImmediately(farm);<br />
+&#47;&#47;there arent even any assertions yet </p>
+<p>        }</p>
+<p>        private void EnqueueConversionJob(String inputFile, String outputFile)<br />
+        {<br />
+            &#47;&#47;Get the context using powershell pipebinds<br />
+            SPServiceContextPipeBind bin = new SPServiceContextPipeBind(web.Site);<br />
+            var context = bin.Read();</p>
+<p>            var _serviceApplicationProxy =<br />
+                (WordServiceApplicationProxy)context.GetDefaultProxy(typeof(WordServiceApplicationProxy));</p>
+<p>            var _job = new ConversionJob(_serviceApplicationProxy);<br />
+            _job.UserToken = web.Site.UserToken;<br />
+            _job.Settings.UpdateFields = true;</p>
+<p>            _job.Settings.OutputFormat = SaveFormat.PDF;</p>
+<p>            _job.AddFile(inputFile, outputFile);</p>
+<p>            _job.Start();<br />
+        }<&#47;pre></p>

@@ -1,0 +1,124 @@
+---
+layout: post
+status: publish
+published: true
+title: Geek Tool for Windows using Powershell and embedded C#
+author:
+  display_name: daniel
+  login: daniel
+  email: nemschok@yahoo.de
+  url: http://devtopics.de/?page_id=52
+author_login: daniel
+author_email: nemschok@yahoo.de
+author_url: http://devtopics.de/?page_id=52
+wordpress_id: 357
+wordpress_url: http://devtopics.de/?p=357
+date: '2013-09-13 14:16:56 +0200'
+date_gmt: '2013-09-13 12:16:56 +0200'
+categories:
+- Allgemein
+- C#
+- Powershell
+tags:
+- C#
+- Powershell
+- GeekTool
+- Windows
+- FuckingAwesome
+- Geek Tool for Windows
+comments: []
+---
+<h1>0. What is this?<&#47;h1><br />
+Some of you might know the awesome Geek Tool for MacOSX. It's basically a programm to render console output to your desktop using different fonts, transparency etc. etc. I always wanted to have something like it for Windows but could never find anything useful. So I implemented it using C#. C#? Doesn't the title indicate Powershell?? Yeah it does. I used Powershell's awesome capability to compile and run embedded C# code! (How awesome is this!?)</p>
+<p>Why did I use Powershell instead of just compiling C#? Well, 2 reasons really:</p>
+<p>1. I did learn Powershell at the time</p>
+<p>2. It's awesome to just run a script and get this awesome kind of functionality :-)</p>
+<h1>0a. Your explanation is too much techno babble<&#47;h1><br />
+Just post a comment, I'll be happy to help :-)</p>
+<h1>1. Installation<&#47;h1><br />
+First get the files</p>
+<ul>
+<li>geek-widget.ps1<&#47;li>
+<li>geek-settings.xml<&#47;li><br />
+<&#47;ul><br />
+from the zip file here:&nbsp;<a href="http:&#47;&#47;devtopics.de&#47;wp-content&#47;uploads&#47;2013&#47;09&#47;geekwidget.zip">geekwidget<&#47;a></p>
+<p>Then make sure <a href="http:&#47;&#47;blogs.technet.com&#47;b&#47;heyscriptingguy&#47;archive&#47;2011&#47;01&#47;07&#47;how-do-i-install-powershell-on-windows-7-and-other-questions.aspx" target="_blank">Powershell is activated<&#47;a> and <a href="http:&#47;&#47;www.tech-recipes.com&#47;rx&#47;6679&#47;windows-7-enable-execution-of-windows-powershell-scripts&#47;" target="_blank">scripts are enabled<&#47;a>.</p>
+<h1>2. Usage<&#47;h1><br />
+Before I explain how you use this awesome tool, read this little problem and be warned:</p>
+<p>You cannot put widgets behind Desktop Icons. This is a limitation of Windows itself because the icons are on a window themselves that is in the background. You cannot put custom windows behind them no matter what you do. The only way to circumvent this would be to render stuff directly to the desktop's backgroundimage. This of course can be done but dude.. ^^</p>
+<p>Also &nbsp;Important: This is a little learning project,it is reliable for its purpose but it does not check for the following things</p>
+<ul>
+<li>Stupid Scripts invoking GUI or the like will cause disaster<&#47;li>
+<li>Do NOT drag the Script itself on a geeklet<&#47;li>
+<li>If the script files the geeklets run, the script won't start. just edit the xml file<&#47;li><br />
+<&#47;ul></p>
+<h2>2.1 Configuration<&#47;h2><br />
+I did not create GUI Support for configuration. So please just edit the&nbsp;geek-settings.xml file if you want to customize your geeklets appearance. If you want another Geeklet to appear, just copy everything from and including <Geeklet> to <&#47;Geeklet> and paste it directly after the last <&#47;Geeklet> Tag. Then change the ID value to anything unique. In this case, 1 would be a good idea :-) You do not need to change position or size here as you can drag around the geeklet once it's running. Also you don't have to set a scriptfile because you can just drag drop one to the geeklet later. &nbsp;Just customize Colors and Font settings here. The RefreshInterval tells the program the interval to rerun the script and rerender the ouput in milliseconds. SO in this case, every 5 seconds the script will be run and the results rendered to your desktop. Also note FadeWhenMouseLeaves, this will make the geeklet transparent once the mouse leaves it. &nbsp;PositionAndSizeCanBeChanged .. yeah figure it out for yourself ;-)</p>
+<pre class="brush: xml; gutter: true"><?xml version="1.0" encoding="utf-8"?><br />
+<ROOT><br />
+  <Geeklet><br />
+    <ID>0<&#47;ID><br />
+    <Left>676<&#47;Left><br />
+    <Top>73<&#47;Top><br />
+    <Width>584<&#47;Width><br />
+    <Height>580<&#47;Height><br />
+    <ForeColor>#00ff00<&#47;ForeColor><br />
+    <BackColor>#000000<&#47;BackColor><br />
+    <RefreshInterval>5000<&#47;RefreshInterval><br />
+    <Scriptfile>default<&#47;Scriptfile><br />
+    <FadesOutWhenMouseLeaves>TRUE<&#47;FadesOutWhenMouseLeaves><br />
+    <Font>Arial<&#47;Font><br />
+    <Fontsize>8<&#47;Fontsize><br />
+    <PositionAndSizeCanBeChanged>TRUE<&#47;PositionAndSizeCanBeChanged><br />
+  <&#47;Geeklet><br />
+<&#47;ROOT><&#47;pre></p>
+<h2>2.2 Finally, can we run a script now?!<&#47;h2><br />
+&nbsp;</p>
+<p>Yeah alright! Right-Click the geek-widget.ps1 file and choose "run with powershell". Then you should see something like this somewhere on your desktop:</p>
+<p><a href="http:&#47;&#47;devtopics.de&#47;wp-content&#47;uploads&#47;2013&#47;09&#47;geekempty.png"><img class="alignnone size-medium wp-image-367" alt="Geeklet no content" src="http:&#47;&#47;devtopics.de&#47;wp-content&#47;uploads&#47;2013&#47;09&#47;geekempty-300x197.png" width="300" height="197" &#47;><&#47;a></p>
+<p>Now create a demo script&nbsp;using your favorite Texteditor or the Powershell ISE (I called it test.ps1 but that does not matter):</p>
+<pre class="brush: powershell; gutter: true">get-eventlog -logname application -newest 20 | out-string<&#47;pre><br />
+Note that you should &nbsp;pipe your output to out-string otherwise you might not get the output you were expecting but you can figure out why for yourself :-) This way you can put any possible String a Powershell Script can generate on your desktop in one or as many widgetwindows as you like. Then</p>
+<ul>
+<li>&nbsp;Drag it from your Explorer to the widget. Voila! See the eventlog with 5second refresh interval in all its glory on your desktop:<&#47;li>
+<li><a href="http:&#47;&#47;devtopics.de&#47;wp-content&#47;uploads&#47;2013&#47;09&#47;geekeventlog.png"><img class="alignnone size-medium wp-image-368" alt="geekeventlog" src="http:&#47;&#47;devtopics.de&#47;wp-content&#47;uploads&#47;2013&#47;09&#47;geekeventlog-300x179.png" width="300" height="179" &#47;><&#47;a><&#47;li>
+<li>Leave the mouse cursor on top of the widget for a little while and it becomes active<&#47;li>
+<li>The drag it around as you wish<&#47;li>
+<li>Double Click the Widget to close but not delete it (use xml file to delete)<&#47;li>
+<li>All changes are automatically saved in the xml file<&#47;li><br />
+<&#47;ul><br />
+Remember, all the code does is put the text on your desktop in your desired font! How you format it is up to you.</p>
+<h1>3. How's it work dude?<&#47;h1><br />
+I am only going to explain the Powershell part of things here. If you are interested in the C# Code, just comment and I will explain that in a different post :-)</p>
+<p>The code is rather simple, the comments should explain most of the stuff that's going on. The actual magic is done using the</p>
+<pre>Add-Type<&#47;pre><br />
+CMDlet. With it i can load and compile my code and all required assemblies. Wow that sure was easy.</p>
+<pre>[HelloWorld.Program]::Main($arr);<&#47;pre><br />
+This is the way to invoke static methods on classes using Powershell. HelloWorld is my class (no comment!) and Main of course is the entry point to my program. That's it for today, enjoy :-)</p>
+<pre class="brush: powershell; gutter: true">$main=@" c# code"</p>
+<p>$form1=@"also c# code"</p>
+<p>$debug=$false</p>
+<p>   #needed to start powershell in single thread STA mode<br />
+   #GUIs have to be singlethreaded and Powershell starts in MTA mode per default<br />
+   if ([threading.thread]::CurrentThread.GetApartmentState() -eq "MTA" -and (-not $debug)) {</p>
+<p>    #&amp; $env:SystemRoot\system32\WindowsPowerShell\v1.0\powershell.exe -sta $myInvocation.MyCommand.Definition<br />
+    &amp; $env:SystemRoot\system32\WindowsPowerShell\v1.0\powershell.exe -windowstyle hidden -sta $myInvocation.MyCommand.Definition</p>
+<p>} else{<&#47;pre></p>
+<pre>#Load required Assemblies<&#47;pre></p>
+<pre class="brush: powershell; gutter: true">$Assem = (<br />
+ "System.Windows.Forms" ,<br />
+ "System.Drawing",<br />
+ "mscorlib",<br />
+ "System.data",<br />
+ "System.Management.Automation",<br />
+ "System.Xml"<br />
+ ) </p>
+<p>$xmldata = [xml](Get-Content geek-settings.xml);<br />
+[string]$geeklet_count=@($xmldata.ROOT.Geeklet).Count;</p>
+<p>Add-Type -ReferencedAssemblies $Assem -TypeDefinition $form1 -Language CSharp</p>
+<p>[string]$path=(dir .\geek-settings.xml).fullname<br />
+$arr= @($geeklet_count,$path)<br />
+$arr<br />
+#run the program<br />
+[HelloWorld.Program]::Main($arr);</p>
+<p>}<&#47;pre></p>
