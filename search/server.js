@@ -1,11 +1,11 @@
 var vm = require('vm');
 
-
+var scriptpath= require('path').basename(__dirname);
 
 
 
 var fs = require("fs");
-var path= './lunr.min.js';
+var path= scriptpath+'/lunr.min.js';
   context = {};
   var data = fs.readFileSync(path);
   vm.runInNewContext(data, context, path);
@@ -16,26 +16,72 @@ var path= './lunr.min.js';
     this.ref('id')
   });
   
-  index.add({
-    id: 1,
-    title: 'Foo',
-    body: 'Foo foo foo!'
-  });
+  
 
-  index.add({
-    id: 2,
-    title: 'Bar',
-    body: 'Bar bar bar!'
+  
+  var filecount=0;
+  var callbacks=0;
+  function readFiles(dirname, onFileContent, onError) {
+  fs.readdir(dirname, function(err, filenames) {
+    if (err) {
+      onError(err);
+      return;
+    }
+	filecount=filenames.length;
+    filenames.forEach(function(filename) {
+      fs.readFile(dirname +'/'+ filename, 'utf-8', function(err, content) {
+        if (err) {
+          onError(err);
+          return;
+        }
+        onFileContent(filename, content);
+      });
+    });
+	
   });
+}
+ 
+readFiles( scriptpath+'/../_posts', function(file, content){
+	callbacks++;
+	
+	
+	index.add({
+    id: callbacks,
+    title: 'Foo',
+    body: content
+  });
+	
+	console.log('read file:'+file+callbacks);
+	if (callbacks==filecount){
+		exportJson();
+	}
+}, function(error){console.log('indexing, file read error'+error);});
   
   
+  function exportJson(){
   var json_export=  JSON.stringify(index);
   
   
-  fs.writeFile("./index.json", json_export, function(err) {
+  fs.writeFile(scriptpath+"/index.json", json_export, function(err) {
     if(err) {
         return console.log(err);
     }
 
     console.log("json file was saved!");
 }); 
+  }
+  
+  
+  
+
+const exec = require('child_process').exec;
+const child = exec("gzip -9 "+ scriptpath+"/index.json",
+  (error, stdout, stderr) => {
+    console.log(`stdout: ${stdout}`);
+    console.log(`stderr: ${stderr}`);
+    if (error !== null) {
+      console.log(`exec error: ${error}`);
+    }
+});
+
+

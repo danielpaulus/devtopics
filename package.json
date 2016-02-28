@@ -7,7 +7,7 @@
     "grunt-contrib-uglify": "*",
     "grunt-contrib-copy": "*",
     "bower": "*",
-    "grunt-exec": "*",
+    "grunt-exec": "*",	
 	"grunt-bower-concat":"*"
   },
   "engines": {
